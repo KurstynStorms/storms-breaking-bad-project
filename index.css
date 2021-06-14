@@ -2,19 +2,30 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #274938;
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 36px;
+    color: #03380e;
+    height: 300;
   }
+h2 {
+  margin-left: 250;
+}
 
   body {
-    background-color: #edf6dd
+    background-image: url("https://images6.alphacoders.com/321/thumb-1920-321927.jpg")
   }
-  
+
   #character-form {
+    align-items: center;
     display: flex;
+    margin-left: 50;
+  }
+
+  #character-list {
+    align-items: center;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 18px;
+    color: #1b5288;
   }
   
   ul {
-    list-style: none;
+    list-style: inside;
   }

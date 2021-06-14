@@ -17,17 +17,16 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(data => {
         data.forEach(item => {
           const characterName = document.createElement("li")
-          characterName.innerHTML = item.name
+          characterName.innerHTML = `Name: ${item.name}`
           const nickName = document.createElement("li")
-          nickName.innerHTML = item.nickname
-          const characterJob = document.createElement("li")
-          characterJob.innerHTML = item.occupation
+          nickName.innerHTML = `Nickname: ${item.nickname}`
+          const characterActor = document.createElement("li")
+          characterActor.innerHTML = `Portrayed by: ${item.portrayed}`
           const characterPhoto = document.createElement("img")
           characterPhoto.src = item.img
-          characterPhoto.height = 200
-          characterPhoto.length = 100
-          characterList.append(characterPhoto, characterName, nickName, characterJob)
-        debugger
+          characterPhoto.height = 300
+          characterPhoto.length = 200
+          characterList.append(characterPhoto, characterName, nickName, characterActor)
         })
       })
   })
