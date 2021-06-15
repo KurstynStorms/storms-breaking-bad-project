@@ -3,27 +3,56 @@
     flex-direction: column;
     align-items: center;
     color: #03380e;
-    height: 300;
+    height: 400;
   }
 h2 {
   margin-left: 250;
 }
 
+h3 {
+  margin-left: 25
+}
+
   body {
-    background-image: url("https://images6.alphacoders.com/321/thumb-1920-321927.jpg")
+    background-attachment: fixed;
+    background-image: url("https://images6.alphacoders.com/321/thumb-1920-321927.jpg");
+    font-size: 20px;
+    color: #1b5288;
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+
+  #character-search {
+    background-color: #d398df;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Trebuchet MS', sans-serif;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+
+  #quote-search-button {
+    background-color: #d398df;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Trebuchet MS', sans-serif;
   }
 
   #character-form {
     align-items: center;
+    font-family: 'Trebuchet MS', sans-serif;
     display: flex;
-    margin-left: 50;
+    margin-left: 10;
+  }
+
+  #quotes-form {
+    align-items: center;
+    font-family: 'Trebuchet MS', sans-serif;
+    display: flex;
+    margin-left: 10;
   }
 
   #character-list {
     align-items: center;
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 18px;
-    color: #1b5288;
+    font-family: 'Trebuchet MS', sans-serif;
   }
   
   ul {

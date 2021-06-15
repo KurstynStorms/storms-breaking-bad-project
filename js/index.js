@@ -4,12 +4,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const divContainer = document.querySelector("div#character-container")
   const characterList = document.querySelector("ul#character-list")
   const quoteList = document.querySelector("ul#quotes-list")
+  const quoteSearchBox = document.querySelector("#quote-search")
+  const quoteSearchBtn = document.querySelector("#quote-search-button")
 
   submitBtn.addEventListener("submit", (event) => {
     event.preventDefault()
 
     const value = submitBtn.querySelector("#search").value
-
     const searchInput = submitBox.value
 
     fetch(`https://www.breakingbadapi.com/api/characters?name=${searchInput}`)
@@ -28,6 +29,25 @@ document.addEventListener("DOMContentLoaded", () => {
           characterPhoto.length = 200
           characterList.append(characterPhoto, characterName, nickName, characterActor)
         })
+      })
+  })
+  quoteSearchBtn.addEventListener("click", (event) => {
+    event.preventDefault()
+    //   const quoteInputValue = quoteSearchBox.querySelector("#quote-search").value
+    const quoteBoxInput = quoteSearchBox.value
+    console.log(quoteBoxInput)
+
+    fetch(`https://www.breakingbadapi.com/api/quote?author=${quoteBoxInput}`)
+      .then(response => response.json())
+      .then(data => {
+        debugger
+        // data.forEach(item => {
+        const actualQuote = document.createElement("li")
+        actualQuote.innerHTML = `Character: ${data[0].author}`
+        const quoteAuthor = document.createElement("li")
+        quoteAuthor.innerHTML = `Quote: ${data[0].quote}`
+        quoteList.append(actualQuote, quoteAuthor)
+        // })
       })
   })
 })
