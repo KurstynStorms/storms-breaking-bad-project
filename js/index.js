@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
           characterPhoto.height = 300
           characterPhoto.length = 200
           characterList.append(characterPhoto, characterName, nickName, characterActor)
+          submitBox.value = ""
         })
       })
   })
@@ -47,6 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const quoteAuthor = document.createElement("li")
         quoteAuthor.innerHTML = `Quote: ${data[0].quote}`
         quoteList.append(actualQuote, quoteAuthor)
+        quoteSearchBox.value = ""
         // })
       })
   })
