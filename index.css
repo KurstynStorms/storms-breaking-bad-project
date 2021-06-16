@@ -2,11 +2,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #03380e;
+    color: #063b11;
     height: 400;
   }
 h2 {
   margin-left: 250;
+}
+
+.button {
+  background-color: #d398df;
+  border-radius: 8px;
+  font-size: 13px;
+  font-family: 'Trebuchet MS', sans-serif;
+  align-items: center;
 }
 
 h3 {
@@ -27,7 +35,6 @@ h3 {
     border-radius: 8px;
     font-size: 13px;
     font-family: 'Trebuchet MS', sans-serif;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   }
 
   #quote-search-button {

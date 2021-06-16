@@ -27,8 +27,15 @@ document.addEventListener("DOMContentLoaded", () => {
           characterPhoto.src = item.img
           characterPhoto.height = 300
           characterPhoto.length = 200
-          characterList.append(characterPhoto, characterName, nickName, characterActor)
+          const deleteBtn = document.createElement("button")
+          deleteBtn.className = "button"
+          deleteBtn.innerHTML = "Delete"
+          characterList.append(characterPhoto, characterName, nickName, characterActor, deleteBtn)
           submitBox.value = ""
+          function deleteItem() {
+            characterList.innerHTML = ""
+          }
+          deleteBtn.addEventListener("click", deleteItem)
         })
       })
   })
@@ -41,7 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch(`https://www.breakingbadapi.com/api/quote?author=${quoteBoxInput}`)
       .then(response => response.json())
       .then(data => {
-        debugger
         // data.forEach(item => {
         const actualQuote = document.createElement("li")
         actualQuote.innerHTML = `Character: ${data[0].author}`
