@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
           deleteBtn.innerHTML = "Delete"
           characterList.append(characterPhoto, characterName, nickName, characterActor, deleteBtn)
           submitBox.value = ""
-          function deleteItem() {
+          function deleteItem () {
             characterList.innerHTML = ""
           }
           deleteBtn.addEventListener("click", deleteItem)
@@ -41,21 +41,18 @@ document.addEventListener("DOMContentLoaded", () => {
   })
   quoteSearchBtn.addEventListener("click", (event) => {
     event.preventDefault()
-    //   const quoteInputValue = quoteSearchBox.querySelector("#quote-search").value
     const quoteBoxInput = quoteSearchBox.value
     console.log(quoteBoxInput)
 
     fetch(`https://www.breakingbadapi.com/api/quote?author=${quoteBoxInput}`)
       .then(response => response.json())
       .then(data => {
-        // data.forEach(item => {
         const actualQuote = document.createElement("li")
         actualQuote.innerHTML = `Character: ${data[0].author}`
         const quoteAuthor = document.createElement("li")
         quoteAuthor.innerHTML = `Quote: ${data[0].quote}`
         quoteList.append(actualQuote, quoteAuthor)
         quoteSearchBox.value = ""
-        // })
       })
   })
 })
